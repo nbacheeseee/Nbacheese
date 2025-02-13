@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EasyRug v1.0</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background: #0f172a;
+            color: #fff;
+            min-height: 100vh;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: 240px 1fr;
+            min-height: 100vh;
+        }
+
+        .sidebar {
+            background: #1e293b;
+            padding: 2rem;
+            border-right: 1px solid #334155;
+        }
+
+        .main-content {
+            padding: 2rem;
+        }
+
+        .user-greeting {
+            color: #818cf8;
+            margin-bottom: 2rem;
+            font-size: 1.2rem;
+        }
+
+        .nav-section {
+            margin-bottom: 2.5rem;
+        }
+
+        .nav-title {
+            color: #64748b;
+            text-transform: uppercase;
+            font-size: 0.8rem;
+            margin-bottom: 1rem;
+        }
+
+        .nav-item {
+            color: #e2e8f0;
+            padding: 0.75rem 1rem;
+            border-radius: 6px;
+            margin-bottom: 0.5rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: block;
+        }
+
+        .nav-item:hover {
+            background: #334155;
+        }
+
+        .card {
+            background: #1e293b;
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            border: 1px solid #334155;
+        }
+
+        .card h2 {
+            margin-bottom: 1.5rem;
+            color: #818cf8;
+        }
+
+        .btn-primary {
+            background: #4f46e5;
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 6px;
+            border: none;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            background: #4338ca;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+            .sidebar {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav class="sidebar">
+            <div class="user-greeting">Welcome, RichCheese!</div>
+            
+            <div class="nav-section">
+                <div class="nav-title">Navigation</div>
+                <a href="#new" class="nav-item">New Rug</a>
+                <a href="#previous" class="nav-item">Previous Rugs</a>
+                <a href="#stats" class="nav-item">Statistics</a>
+                <a href="#settings" class="nav-item">Settings</a>
+            </div>
+        </nav>
+
+        <main class="main-content">
+            <!-- New Rug Section -->
+            <div class="card" id="new">
+                <h2>Create New Token Deployment</h2>
+                <p>Start a new token deployment process</p>
+                <button class="btn-primary" style="margin-top: 1rem;">Launch Rug Wizard</button>
+            </div>
+
+            <!-- Previous Rugs Section -->
+            <div class="card" id="previous">
+                <h2>Deployment History</h2>
+                <p>Your previous deployments will appear here</p>
+                <!-- Add table/list of previous deployments -->
+            </div>
+
+            <!-- Statistics Section -->
+            <div class="card" id="stats">
+                <h2>Performance Statistics</h2>
+                <p>Your deployment statistics will be displayed here</p>
+                <!-- Add charts/graphs -->
+            </div>
+
+            <!-- Settings Section -->
+            <div class="card" id="settings">
+                <h2>Configuration Settings</h2>
+                <p>Account preferences and settings</p>
+                <!-- Add settings form -->
+            </div>
+        </main>
+    </div>
+</body>
+</html>
